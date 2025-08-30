@@ -4,10 +4,10 @@ interface InavMenu {
   targetId: string;
 }
 const navMenu: InavMenu[] = [
-  { label: '/', targetId: '' },
-  { label: 'work', targetId: '' },
-  { label: 'projects', targetId: '' },
-  { label: 'blogs', targetId: '' },
+  { label: 'Home', targetId: 'home' },
+  { label: 'Work', targetId: 'work' },
+  { label: 'Projects', targetId: 'projects' },
+  { label: 'Blogs', targetId: 'blogs' },
 ];
 
 const Navbar = () => {
