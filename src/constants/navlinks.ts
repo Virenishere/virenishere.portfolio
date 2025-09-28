@@ -6,24 +6,24 @@ export interface INavLink {
 
 const Navlinks: INavLink[] = [
   {
-    label: "Home",
-    targetId: "home",
-    path: "/",
+    label: 'Home',
+    targetId: 'home',
+    path: '/',
   },
   {
-    label: "Work",
-    targetId: "work",
-    path: "/work",
+    label: 'Work',
+    targetId: 'work',
+    path: '/work',
   },
   {
-    label: "Projects",
-    targetId: "projects",
-    path: "/projects",
+    label: 'Projects',
+    targetId: 'projects',
+    path: '/projects',
   },
   {
-    label: "Blogs",
-    targetId: "blogs",
-    path: "/blogs",
+    label: 'Blogs',
+    targetId: 'blogs',
+    path: '/blogs',
   },
 ];
 

@@ -2,35 +2,36 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Link } from 'react-scroll';
 import Navlinks from '@/constants/navlinks';
 
 const Navbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [selectedIndex, setSelectedIndex] = useState<number>(0); 
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const navRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const [ballPosition, setBallPosition] = useState<{ 
-    left: number; 
-    top: number; 
-    width: number; 
-    height: number; 
+  const [ballPosition, setBallPosition] = useState<{
+    left: number;
+    top: number;
+    width: number;
+    height: number;
   } | null>(null);
 
   // Calculate position and dimensions for the ball based on text width
   const calculateBallPosition = (index: number) => {
     if (!navRefs.current[index]) return null;
-    
+
     const element = navRefs.current[index];
     const navContainer = element?.parentElement;
-    
+
     if (!element || !navContainer) return null;
-    
+
     const containerRect = navContainer.getBoundingClientRect();
     const elementRect = element.getBoundingClientRect();
-    
+
     // Add padding to the width for better visual effect
     const paddingX = 16; // 8px on each side
-    const paddingY = 8;  // 4px on top and bottom
-    
+    const paddingY = 8; // 4px on top and bottom
+
     return {
       left: elementRect.left - containerRect.left - paddingX / 2,
       top: elementRect.top - containerRect.top - paddingY / 2,
@@ -74,15 +75,15 @@ const Navbar = () => {
 
   // Consistent spring configuration for bouncy effect
   const springConfig = {
-    type: "spring" as const,
+    type: 'spring' as const,
     stiffness: 280,
     damping: 18,
     mass: 0.9,
   };
 
   return (
-    <nav className="flex justify-center items-center pt-6 pb-10">
-      <ul className="relative flex flex-row bg-transparent shadow-lg ring-1 ring-white/5 gap-10 text-2xl px-16 py-6 font-semibold rounded-full text-white overflow-visible">
+    <nav className="flex justify-center items-center pt-6 pb-10 fixed top-0 left-0 right-0 z-50">
+      <ul className="relative flex flex-row backdrop-blur-md bg-white/20 shadow-lg ring-1 ring-white/5 gap-10 text-2xl px-16 py-6 font-semibold rounded-full text-white overflow-visible">
         {/* Animated sliding ball with dynamic width */}
         <AnimatePresence>
           {ballPosition && (
@@ -120,21 +121,21 @@ const Navbar = () => {
                 },
                 opacity: {
                   duration: 0.2,
-                  ease: "easeOut"
-                }
+                  ease: 'easeOut',
+                },
               }}
               whileHover={{
                 scale: 1.05,
-                transition: { 
+                transition: {
                   ...springConfig,
                   stiffness: 400,
-                  damping: 20
-                }
+                  damping: 20,
+                },
               }}
             />
           )}
         </AnimatePresence>
-        
+
         {Navlinks.map(({ label, targetId }, index) => (
           <li
             key={targetId}
@@ -150,9 +151,18 @@ const Navbar = () => {
                 : 'text-white/80 hover:text-white/90'
             }`}
           >
-            <a href={`#${targetId}`} className="block">
+            <Link
+              to={targetId}
+              spy={true}
+              smooth={true}
+              offset={-100} // Offset for fixed navbar
+              duration={800}
+              className="block cursor-pointer"
+              onSetActive={() => setSelectedIndex(index)}
+              activeClass="active"
+            >
               {label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
