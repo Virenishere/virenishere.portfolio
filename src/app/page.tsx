@@ -10,7 +10,7 @@ export default function Home() {
     <main className="bg-background text-foreground min-h-screen relative scroll-smooth select-none transition-colors duration-300">
       {/* navbar  */}
       <Navbar />
-      
+
       {/* scrollindicator  */}
       <ScrollIndicator />
 
@@ -50,7 +50,9 @@ export default function Home() {
         className="min-h-screen flex items-center justify-center"
       >
         <div className="text-center">
-          <h2 className="text-5xl font-bold text-foreground mb-6">My Projects</h2>
+          <h2 className="text-5xl font-bold text-foreground mb-6">
+            My Projects
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             This is the projects section. The navbar will smoothly scroll to
             this section when clicked.
@@ -64,14 +66,16 @@ export default function Home() {
         className="min-h-screen flex items-center justify-center bg-muted/20"
       >
         <div className="text-center">
-          <h2 className="text-5xl font-bold text-foreground mb-6">Blog Posts</h2>
+          <h2 className="text-5xl font-bold text-foreground mb-6">
+            Blog Posts
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             This is the blogs section. React-scroll will handle the smooth
             navigation here.
           </p>
         </div>
       </section>
-      
+
       {/* Icon Test Section - You can remove this later */}
       <section className="py-20">
         <IconTest />

@@ -1,42 +1,82 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import {Moon, Sun} from "lucide-react";
+import * as React from "react"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "motion/react"
+
 import { Button } from "@/components/ui/button"
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   if (!mounted) {
     return (
-      <Button variant="outline" size="icon" title="Toggle theme" className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600">
-        <Sun className="h-[1.2rem] w-[1.2rem] text-gray-900 dark:text-white" />
+      <Button 
+        variant="outline" 
+        size="icon"
+        className="h-14 w-14 rounded-full backdrop-blur-md bg-white/20 shadow-lg ring-1 ring-white/5 text-white hover:bg-white/30 transition-all duration-300 border-white/10"
+      >
+        <Sun className="h-[1.4rem] w-[1.4rem]" />
         <span className="sr-only">Toggle theme</span>
       </Button>
-    );
+    )
   }
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
 
   return (
     <Button 
       variant="outline" 
-      size="icon" 
+      size="icon"
       onClick={toggleTheme}
-      title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-      className="relative bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
+      className="h-14 w-14 rounded-full backdrop-blur-md bg-white/20 shadow-lg ring-1 ring-white/5 text-white hover:bg-white/30 transition-all duration-300 border-white/10 relative overflow-hidden"
     >
-      <Sun className={`h-[1.2rem] w-[1.2rem] transition-all duration-300 text-gray-900 dark:text-white ${theme === 'dark' ? 'scale-0 -rotate-90 opacity-0' : 'scale-100 rotate-0 opacity-100'}`} />
-      <Moon className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-300 text-gray-900 dark:text-white ${theme === 'dark' ? 'scale-100 rotate-0 opacity-100' : 'scale-0 rotate-90 opacity-0'}`} />
+      <AnimatePresence mode="wait" initial={false}>
+        {theme === 'light' ? (
+          <motion.div
+            key="sun"
+            initial={{ scale: 0, rotate: -90, opacity: 0 }}
+            animate={{ scale: 1, rotate: 0, opacity: 1 }}
+            exit={{ scale: 0, rotate: 90, opacity: 0 }}
+            transition={{ 
+              duration: 0.4, 
+              ease: [0.4, 0, 0.2, 1],
+              type: "spring",
+              stiffness: 200,
+              damping: 20
+            }}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <Sun className="h-[1.4rem] w-[1.4rem]" />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="moon"
+            initial={{ scale: 0, rotate: -90, opacity: 0 }}
+            animate={{ scale: 1, rotate: 0, opacity: 1 }}
+            exit={{ scale: 0, rotate: 90, opacity: 0 }}
+            transition={{ 
+              duration: 0.4, 
+              ease: [0.4, 0, 0.2, 1],
+              type: "spring",
+              stiffness: 200,
+              damping: 20
+            }}
+            className="absolute inset-0 flex items-center justify-center"
+          >
+            <Moon className="h-[1.4rem] w-[1.4rem]" />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <span className="sr-only">Toggle theme</span>
     </Button>
   )

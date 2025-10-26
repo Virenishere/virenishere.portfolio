@@ -29,8 +29,8 @@ const Navbar = () => {
     const elementRect = element.getBoundingClientRect();
 
     // Add padding to the width for better visual effect
-    const paddingX = 16; 
-    const paddingY = 8; 
+    const paddingX = 16;
+    const paddingY = 8;
 
     return {
       left: elementRect.left - containerRect.left - paddingX / 2,
@@ -82,7 +82,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-center items-center pt-6 pb-10 fixed top-0 left-0 right-0 z-40">
+    <nav className="flex justify-center items-center pt-20 pb-6 fixed -top-16 left-0 right-0 z-40">
       <ul className="relative flex flex-row backdrop-blur-md bg-white/20 shadow-lg ring-1 ring-white/5 gap-10 text-2xl px-16 py-6 font-semibold rounded-full text-white overflow-visible">
         {/* Animated sliding ball with dynamic width */}
         <AnimatePresence>
@@ -117,7 +117,7 @@ const Navbar = () => {
                 height: springConfig,
                 scale: {
                   ...springConfig,
-                  stiffness: 320, 
+                  stiffness: 320,
                 },
                 opacity: {
                   duration: 0.2,

@@ -23,7 +23,7 @@ const ScrollIndicator = () => {
       <div className="w-1 h-32 bg-white/20 rounded-full overflow-hidden">
         <motion.div
           className="w-full bg-gradient-to-t from-blue-500 to-cyan-500 rounded-full"
-        //#06B6D4
+          //#06B6D4
           style={{ height: `${scrollProgress}%` }}
           initial={{ height: 0 }}
           animate={{ height: `${scrollProgress}%` }}

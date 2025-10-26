@@ -9,7 +9,6 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-
 const inter = Inter({ subsets: ['latin'] });
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-     <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           inter.className,
@@ -39,11 +38,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange>
-
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
           <Toaster />
         </ThemeProvider>
