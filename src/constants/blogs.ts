@@ -4,7 +4,8 @@ const BlogPosts: BlogPost[] = [
   {
     id: 'getting-started-nextjs',
     title: 'Getting Started with Next.js 14: A Complete Guide',
-    excerpt: 'Learn how to build modern web applications with Next.js 14, including the new App Router and Server Components.',
+    excerpt:
+      'Learn how to build modern web applications with Next.js 14, including the new App Router and Server Components.',
     content: `
 # Getting Started with Next.js 14
 
@@ -33,12 +34,13 @@ npm run dev
     readTime: 8,
     featured: true,
     image: '/blogs/nextjs-guide.jpg',
-    slug: 'getting-started-nextjs'
+    slug: 'getting-started-nextjs',
   },
   {
     id: 'typescript-best-practices',
     title: 'TypeScript Best Practices for React Developers',
-    excerpt: 'Discover essential TypeScript patterns and practices that will make your React code more robust and maintainable.',
+    excerpt:
+      'Discover essential TypeScript patterns and practices that will make your React code more robust and maintainable.',
     content: `
 # TypeScript Best Practices for React
 
@@ -56,12 +58,13 @@ Always define proper interfaces for your props and state...
     readTime: 12,
     featured: true,
     image: '/blogs/typescript-react.jpg',
-    slug: 'typescript-best-practices'
+    slug: 'typescript-best-practices',
   },
   {
     id: 'tailwind-tips',
     title: '10 Tailwind CSS Tips for Better UI Development',
-    excerpt: 'Boost your productivity with these advanced Tailwind CSS techniques and utilities.',
+    excerpt:
+      'Boost your productivity with these advanced Tailwind CSS techniques and utilities.',
     content: `
 # 10 Tailwind CSS Tips
 
@@ -78,23 +81,22 @@ Create your own utility classes...
     tags: ['Tailwind CSS', 'CSS', 'UI/UX', 'Frontend'],
     readTime: 6,
     image: '/blogs/tailwind-tips.jpg',
-    slug: 'tailwind-tips'
-  }
+    slug: 'tailwind-tips',
+  },
 ];
 
 export default BlogPosts;
 
 // Helper functions
-export const getFeaturedBlogs = () => 
-  BlogPosts.filter(blog => blog.featured);
+export const getFeaturedBlogs = () => BlogPosts.filter((blog) => blog.featured);
 
-export const getBlogBySlug = (slug: string) => 
-  BlogPosts.find(blog => blog.slug === slug);
+export const getBlogBySlug = (slug: string) =>
+  BlogPosts.find((blog) => blog.slug === slug);
 
-export const getBlogsByTag = (tag: string) => 
-  BlogPosts.filter(blog => blog.tags.includes(tag));
+export const getBlogsByTag = (tag: string) =>
+  BlogPosts.filter((blog) => blog.tags.includes(tag));
 
 export const getAllTags = () => {
-  const tags = BlogPosts.flatMap(blog => blog.tags);
+  const tags = BlogPosts.flatMap((blog) => blog.tags);
   return [...new Set(tags)];
 };

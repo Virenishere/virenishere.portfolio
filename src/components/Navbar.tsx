@@ -29,8 +29,8 @@ const Navbar = () => {
     const elementRect = element.getBoundingClientRect();
 
     // Add padding to the width for better visual effect
-    const paddingX = 16; // 8px on each side
-    const paddingY = 8; // 4px on top and bottom
+    const paddingX = 16; 
+    const paddingY = 8; 
 
     return {
       left: elementRect.left - containerRect.left - paddingX / 2,
@@ -82,7 +82,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-center items-center pt-6 pb-10 fixed top-0 left-0 right-0 z-50">
+    <nav className="flex justify-center items-center pt-6 pb-10 fixed top-0 left-0 right-0 z-40">
       <ul className="relative flex flex-row backdrop-blur-md bg-white/20 shadow-lg ring-1 ring-white/5 gap-10 text-2xl px-16 py-6 font-semibold rounded-full text-white overflow-visible">
         {/* Animated sliding ball with dynamic width */}
         <AnimatePresence>
@@ -90,7 +90,7 @@ const Navbar = () => {
             <motion.div
               className="absolute pointer-events-none z-0 rounded-full"
               style={{
-                backgroundColor: '#ff0088',
+                backgroundColor: '#3B82F6',
               }}
               animate={{
                 left: ballPosition.left,
@@ -117,7 +117,7 @@ const Navbar = () => {
                 height: springConfig,
                 scale: {
                   ...springConfig,
-                  stiffness: 320, // Slightly higher for scale for snappier feel
+                  stiffness: 320, 
                 },
                 opacity: {
                   duration: 0.2,
@@ -155,7 +155,7 @@ const Navbar = () => {
               to={targetId}
               spy={true}
               smooth={true}
-              offset={-100} // Offset for fixed navbar
+              offset={-100}
               duration={800}
               className="block cursor-pointer"
               onSetActive={() => setSelectedIndex(index)}

@@ -3,6 +3,12 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/sonner';
+import { ThemeProvider } from '@/components/theme-provider';
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
 
 const inter = Inter({ subsets: ['latin'] });
 const spaceGrotesk = Space_Grotesk({
@@ -22,13 +28,9 @@ export const metadata: Metadata = {
     "I'm Virender Prasad — a passionate developer crafting clean, functional web experiences. Explore my work and feel free to reach out!",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           inter.className,
@@ -36,8 +38,15 @@ export default function RootLayout({
           JetBrainsMono.variable
         )}
       >
-        {children}
-        <Toaster />
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange>
+
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

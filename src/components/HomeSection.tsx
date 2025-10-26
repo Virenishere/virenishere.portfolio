@@ -1,10 +1,11 @@
 import Intro from './Intro';
-import ResumeBtn from './resumeBtn';
+import TopNavBtn from './TopNavBtn';
+
 
 export default function HomeSection() {
   return (
     <div>
-      <ResumeBtn />
+      <TopNavBtn />
       <Intro />
     </div>
   );

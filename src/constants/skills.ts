@@ -1,20 +1,17 @@
 import { Skill } from '@/types/types';
-import { 
-  Code2, 
-  Database, 
-  Server, 
-  Cloud, 
-  GitBranch, 
+import {
+  Code2,
+  Database,
+  Server,
+  Cloud,
+  GitBranch,
   Palette,
   Zap,
   FileCode,
   Layers,
   Container,
   Cpu,
-  Globe,
-  Smartphone,
   Terminal,
-  Settings
 } from 'lucide-react';
 
 const Skills: Skill[] = [
@@ -24,35 +21,35 @@ const Skills: Skill[] = [
     name: 'React',
     category: 'frontend',
     level: 'advanced',
-    icon: Code2
+    icon: Code2,
   },
   {
     id: 'nextjs',
     name: 'Next.js',
     category: 'frontend',
     level: 'advanced',
-    icon: Zap
+    icon: Zap,
   },
   {
     id: 'typescript',
     name: 'TypeScript',
     category: 'frontend',
     level: 'advanced',
-    icon: FileCode
+    icon: FileCode,
   },
   {
     id: 'tailwind',
     name: 'Tailwind CSS',
     category: 'frontend',
     level: 'expert',
-    icon: Palette
+    icon: Palette,
   },
   {
     id: 'framer-motion',
     name: 'Framer Motion',
     category: 'frontend',
     level: 'intermediate',
-    icon: Layers
+    icon: Layers,
   },
 
   // Backend
@@ -61,21 +58,21 @@ const Skills: Skill[] = [
     name: 'Node.js',
     category: 'backend',
     level: 'advanced',
-    icon: Server
+    icon: Server,
   },
   {
     id: 'go',
     name: 'Go',
     category: 'backend',
     level: 'intermediate',
-    icon: Cpu
+    icon: Cpu,
   },
   {
     id: 'python',
     name: 'Python',
     category: 'backend',
     level: 'intermediate',
-    icon: Terminal
+    icon: Terminal,
   },
 
   // Database
@@ -84,21 +81,21 @@ const Skills: Skill[] = [
     name: 'MongoDB',
     category: 'database',
     level: 'intermediate',
-    icon: Database
+    icon: Database,
   },
   {
     id: 'redis',
     name: 'Redis',
     category: 'database',
     level: 'intermediate',
-    icon: Database
+    icon: Database,
   },
   {
     id: 'postgresql',
     name: 'PostgreSQL',
     category: 'database',
     level: 'intermediate',
-    icon: Database
+    icon: Database,
   },
 
   // Cloud & Tools
@@ -107,29 +104,31 @@ const Skills: Skill[] = [
     name: 'AWS',
     category: 'cloud',
     level: 'intermediate',
-    icon: Cloud
+    icon: Cloud,
   },
   {
     id: 'docker',
     name: 'Docker',
     category: 'tools',
     level: 'intermediate',
-    icon: Container
+    icon: Container,
   },
   {
     id: 'git',
     name: 'Git',
     category: 'tools',
     level: 'advanced',
-    icon: GitBranch
-  }
+    icon: GitBranch,
+  },
 ];
 
 export default Skills;
 
 // Helper functions for easy filtering
-export const getSkillsByCategory = (category: Skill['category']) => 
-  Skills.filter(skill => skill.category === category);
+export const getSkillsByCategory = (category: Skill['category']) =>
+  Skills.filter((skill) => skill.category === category);
 
-export const getFeaturedSkills = () => 
-  Skills.filter(skill => skill.level === 'expert' || skill.level === 'advanced');
+export const getFeaturedSkills = () =>
+  Skills.filter(
+    (skill) => skill.level === 'expert' || skill.level === 'advanced'
+  );
