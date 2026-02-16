@@ -1,14 +1,19 @@
-"use client";
+'use client';
 
 import {
   motion,
   useMotionValue,
   useSpring,
   useAnimationFrame,
-} from "framer-motion";
-import { useEffect } from "react";
+} from 'framer-motion';
+import { useEffect,useRef } from 'react';
 
 export default function CursorAnimation() {
+
+  const initialized = useRef(false);
+
+  const opacity = useMotionValue(0);
+
   // real mouse position
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -39,14 +44,22 @@ export default function CursorAnimation() {
 
   // track mouse
   useEffect(() => {
-    const move = (e: PointerEvent) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
-    };
+  const move = (e: PointerEvent) => {
+  mouseX.set(e.clientX);
+  mouseY.set(e.clientY);
 
-    window.addEventListener("pointermove", move);
-    return () => window.removeEventListener("pointermove", move);
-  }, []);
+  if (!initialized.current) {
+    cursorX.set(e.clientX);
+    cursorY.set(e.clientY);
+    opacity.set(1); // show cursor only after sync
+    initialized.current = true;
+  }
+};
+  window.addEventListener("pointermove", move);
+
+  return () => window.removeEventListener("pointermove", move);
+}, []);
+
 
   // Apple-style smooth follow loop
   useAnimationFrame(() => {
@@ -63,15 +76,15 @@ export default function CursorAnimation() {
     const hover = (e: Event) => {
       const target = e.target as HTMLElement;
 
-      if (target.closest(".cursor-hover")) {
+      if (target.closest('.cursor-hover')) {
         scale.set(2);
       } else {
         scale.set(1);
       }
     };
 
-    document.addEventListener("mouseover", hover);
-    return () => document.removeEventListener("mouseover", hover);
+    document.addEventListener('mouseover', hover);
+    return () => document.removeEventListener('mouseover', hover);
   }, []);
 
   return (
@@ -80,6 +93,7 @@ export default function CursorAnimation() {
         translateX: smoothX,
         translateY: smoothY,
         scale: smoothScale,
+        opacity,
       }}
       className="
         pointer-events-none
@@ -88,9 +102,7 @@ export default function CursorAnimation() {
         h-8 w-8
         -translate-x-1/2 -translate-y-1/2
         rounded-full
-        border border-white/80
-        bg-white
-        backdrop-blur-sm
+        border-2 border-white/80
         will-change-transform
       "
     />
