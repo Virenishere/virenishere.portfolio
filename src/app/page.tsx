@@ -5,7 +5,7 @@ import ScrollIndicator from '@/components/ScrollIndicator';
 
 export default function Home() {
   return (
-    <main className="bg-[#1a1d33] min-h-screen relative scroll-smooth select-none">
+    <main className="bg-[#000] min-h-screen relative scroll-smooth select-none">
       <Navbar />
       <ScrollIndicator />
       

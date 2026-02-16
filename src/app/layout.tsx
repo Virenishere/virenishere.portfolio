@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/sonner';
+import CursorAnimation from '@/components/ui/cursor/CursorAnimation';
 
 const inter = Inter({ subsets: ['latin'] });
 const spaceGrotesk = Space_Grotesk({
@@ -36,6 +37,7 @@ export default function RootLayout({
           JetBrainsMono.variable
         )}
       >
+        <CursorAnimation />
         {children}
         <Toaster />
       </body>

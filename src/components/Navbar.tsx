@@ -83,14 +83,14 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-center items-center pt-6 pb-10 fixed top-0 left-0 right-0 z-50">
-      <ul className="relative flex flex-row backdrop-blur-md bg-white/20 shadow-lg ring-1 ring-white/5 gap-10 text-2xl px-16 py-6 font-semibold rounded-full text-white overflow-visible">
+      <ul className="relative flex flex-row backdrop-blur-md bg-white/5 shadow-lg gap-10 text-2xl px-16 py-6 font-semibold rounded-full text-white overflow-visible">
         {/* Animated sliding ball with dynamic width */}
         <AnimatePresence>
           {ballPosition && (
             <motion.div
               className="absolute pointer-events-none z-0 rounded-full"
               style={{
-                backgroundColor: '#ff0088',
+                backgroundColor: '#fff',
               }}
               animate={{
                 left: ballPosition.left,
