@@ -1,12 +1,14 @@
 'use client';
-import Navbar from '@/components/Navbar';
 import IconTest from '@/components/IconTest';
 import ScrollIndicator from '@/components/ui/scroll/ScrollIndicator';
+import DesktopNavbar from '@/components/ui/navbar/DesktopNavbar';
+import MobileNavbar from '@/components/ui/navbar/MobileNavbar';
 
 export default function Home() {
   return (
     <main className="bg-[#000] min-h-screen relative scroll-smooth select-none">
-      <Navbar />
+      <MobileNavbar />
+      {/* <DesktopNavbar /> */}
       <ScrollIndicator />
 
       {/* Home Section */}

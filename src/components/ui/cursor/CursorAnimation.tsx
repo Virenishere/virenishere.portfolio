@@ -6,10 +6,9 @@ import {
   useSpring,
   useAnimationFrame,
 } from 'framer-motion';
-import { useEffect,useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function CursorAnimation() {
-
   const initialized = useRef(false);
 
   const opacity = useMotionValue(0);
@@ -44,22 +43,21 @@ export default function CursorAnimation() {
 
   // track mouse
   useEffect(() => {
-  const move = (e: PointerEvent) => {
-  mouseX.set(e.clientX);
-  mouseY.set(e.clientY);
+    const move = (e: PointerEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
 
-  if (!initialized.current) {
-    cursorX.set(e.clientX);
-    cursorY.set(e.clientY);
-    opacity.set(1); // show cursor only after sync
-    initialized.current = true;
-  }
-};
-  window.addEventListener("pointermove", move);
+      if (!initialized.current) {
+        cursorX.set(e.clientX);
+        cursorY.set(e.clientY);
+        opacity.set(1); // show cursor only after sync
+        initialized.current = true;
+      }
+    };
+    window.addEventListener('pointermove', move);
 
-  return () => window.removeEventListener("pointermove", move);
-}, []);
-
+    return () => window.removeEventListener('pointermove', move);
+  }, []);
 
   // Apple-style smooth follow loop
   useAnimationFrame(() => {
@@ -102,7 +100,7 @@ export default function CursorAnimation() {
         h-8 w-8
         -translate-x-1/2 -translate-y-1/2
         rounded-full
-        border-2 border-white/80
+        border-4 border-white/80
         will-change-transform
       "
     />

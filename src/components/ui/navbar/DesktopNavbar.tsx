@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-scroll';
 import Navlinks from '@/constants/navlinks';
 
-const Navbar = () => {
+const DesktopNavbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const navRefs = useRef<(HTMLLIElement | null)[]>([]);
@@ -170,4 +170,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default DesktopNavbar;
