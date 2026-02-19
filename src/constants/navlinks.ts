@@ -11,6 +11,11 @@ const Navlinks: INavLink[] = [
     path: '/',
   },
   {
+    label: 'Skill',
+    targetId: "skill",
+    path: '/skills',
+  },
+  {
     label: 'Work',
     targetId: 'work',
     path: '/work',

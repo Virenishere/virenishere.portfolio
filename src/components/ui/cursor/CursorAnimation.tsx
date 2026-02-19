@@ -23,7 +23,7 @@ export default function CursorAnimation() {
 
   // smooth physics
   const smoothX = useSpring(cursorX, {
-    stiffness: 120,
+    stiffness: 250,
     damping: 20,
     mass: 0.4,
   });
@@ -97,7 +97,7 @@ export default function CursorAnimation() {
         pointer-events-none
         fixed top-0 left-0
         z-[9999]
-        h-8 w-8
+        h-12 w-12
         -translate-x-1/2 -translate-y-1/2
         rounded-full
         border-4 border-white/80

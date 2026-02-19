@@ -3,33 +3,29 @@ import IconTest from '@/components/IconTest';
 import ScrollIndicator from '@/components/ui/scroll/ScrollIndicator';
 import DesktopNavbar from '@/components/ui/navbar/DesktopNavbar';
 import MobileNavbar from '@/components/ui/navbar/MobileNavbar';
+import Introduction from '@/components/Introduction';
 
 export default function Home() {
   return (
     <main className="bg-[#000] min-h-screen relative scroll-smooth select-none">
-      <MobileNavbar />
-      {/* <DesktopNavbar /> */}
+      <div className="lg:hidden">
+        <MobileNavbar />
+      </div>
+      <div className="hidden lg:block">
+        <DesktopNavbar />
+      </div>
       <ScrollIndicator />
 
       {/* Home Section */}
-      <section
+      {/* <section
         id="home"
         className="min-h-screen flex items-center justify-center pt-20"
       >
-        <div className="text-center">
-          <h1 className="text-6xl font-bold text-white mb-6">Welcome Home</h1>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            This is the home section. The navbar will automatically highlight
-            when you scroll to this section.
-          </p>
-          <div className="mt-8">
-            <p className="text-white/50 text-sm">
-              Try clicking on the navbar links above to see smooth scrolling in
-              action!
-            </p>
-          </div>
-        </div>
-      </section>
+        
+
+        <p className='font-jetbrains text-white'>fullstack engineer</p>
+      </section> */}
+      <Introduction />
 
       {/* Work Section */}
       <section
