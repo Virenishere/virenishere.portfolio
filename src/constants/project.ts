@@ -1,6 +1,6 @@
 import { Project } from '@/types/types';
 
-const Projects: Project[] = [
+const projectsData: Project[] = [
   {
     id: 'project-1',
     title: 'E-Commerce Platform',
@@ -57,11 +57,11 @@ const Projects: Project[] = [
   },
 ];
 
-export default Projects;
+export default projectsData;
 
 // Helper functions
 export const getFeaturedProjects = () =>
-  Projects.filter((project) => project.featured);
+  projectsData.filter((project) => project.featured);
 
 export const getProjectById = (id: string) =>
-  Projects.find((project) => project.id === id);
+  projectsData.find((project) => project.id === id);

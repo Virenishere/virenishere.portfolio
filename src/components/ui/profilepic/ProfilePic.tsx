@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useState } from "react";
-import profilepic from "@/assets/images/pfp.jpg";
+import Image from 'next/image';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import profilepic from '@/assets/images/pfp.jpg';
 
 export default function ProfilePic() {
   const [mounted, setMounted] = useState(false);
@@ -44,7 +44,7 @@ export default function ProfilePic() {
         style={{
           rotateX: smoothX,
           rotateY: smoothY,
-          transformStyle: "preserve-3d",
+          transformStyle: 'preserve-3d',
         }}
       >
         <Image

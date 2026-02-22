@@ -12,7 +12,7 @@ const Navlinks: INavLink[] = [
   },
   {
     label: 'Skill',
-    targetId: "skill",
+    targetId: 'skill',
     path: '/skills',
   },
   {

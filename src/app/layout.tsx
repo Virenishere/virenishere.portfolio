@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/sonner';
 import CursorAnimation from '@/components/ui/cursor/CursorAnimation';
 
+
 const inter = Inter({ subsets: ['latin'] });
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],

@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 
-const sections = ['home', 'work', 'projects', 'blogs'];
+const sections = ['home', 'skill' , 'work', 'projects', 'blogs'];
 
 export default function ScrollIndicator() {
   const [activeSection, setActiveSection] = useState('home');

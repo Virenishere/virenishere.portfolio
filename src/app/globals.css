@@ -122,5 +122,5 @@
 }
 
 @theme {
-  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-jetbrains: 'JetBrains Mono', monospace;
 }

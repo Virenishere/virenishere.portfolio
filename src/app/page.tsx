@@ -4,6 +4,9 @@ import ScrollIndicator from '@/components/ui/scroll/ScrollIndicator';
 import DesktopNavbar from '@/components/ui/navbar/DesktopNavbar';
 import MobileNavbar from '@/components/ui/navbar/MobileNavbar';
 import Introduction from '@/components/Introduction';
+import Skills from '@/components/Skills';
+import Work from '@/components/Work';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -14,21 +17,20 @@ export default function Home() {
       <div className="hidden lg:block">
         <DesktopNavbar />
       </div>
+
       <ScrollIndicator />
 
       {/* Home Section */}
-      {/* <section
-        id="home"
-        className="min-h-screen flex items-center justify-center pt-20"
-      >
-        
-
-        <p className='font-jetbrains text-white'>fullstack engineer</p>
-      </section> */}
       <Introduction />
 
+      {/* skill section  */}
+      <Skills />
+      
+      {/* work section  */}
+      <Work />
+      
       {/* Work Section */}
-      <section
+      {/* <section
         id="work"
         className="min-h-screen flex items-center justify-center bg-white/5"
       >
@@ -52,10 +54,11 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <Projects  />
       {/* Projects Section */}
-      <section
+      {/* <section
         id="projects"
         className="min-h-screen flex items-center justify-center"
       >
@@ -66,7 +69,7 @@ export default function Home() {
             this section when clicked.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Blogs Section */}
       <section
@@ -80,11 +83,6 @@ export default function Home() {
             navigation here.
           </p>
         </div>
-      </section>
-
-      {/* Icon Test Section - You can remove this later */}
-      <section className="py-20">
-        <IconTest />
       </section>
     </main>
   );
