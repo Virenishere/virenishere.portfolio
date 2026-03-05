@@ -1,5 +1,5 @@
-import { useState } from "react";
-import HoverTooltip from "./ui/HoverTooltip";
+import { useState } from 'react';
+import HoverTooltip from './ui/HoverTooltip';
 
 const Intro = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -19,11 +19,11 @@ const Intro = () => {
             Try clicking on the navbar links above to see smooth scrolling in
             action!
           </p>
-          
+
           {/* Demo Grid for Different Tooltip Positions */}
           <div className="grid grid-cols-3 gap-8 mt-8 max-w-2xl mx-auto">
             {/* Top Left */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -43,7 +43,7 @@ const Intro = () => {
             </div>
 
             {/* Top Center */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -63,7 +63,7 @@ const Intro = () => {
             </div>
 
             {/* Top Right */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -83,7 +83,7 @@ const Intro = () => {
             </div>
 
             {/* Left */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -103,7 +103,7 @@ const Intro = () => {
             </div>
 
             {/* Center */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -123,7 +123,7 @@ const Intro = () => {
             </div>
 
             {/* Right */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -143,7 +143,7 @@ const Intro = () => {
             </div>
 
             {/* Bottom Left */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -163,7 +163,7 @@ const Intro = () => {
             </div>
 
             {/* Bottom Center */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -183,7 +183,7 @@ const Intro = () => {
             </div>
 
             {/* Bottom Right */}
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -205,7 +205,7 @@ const Intro = () => {
 
           {/* Custom Translation Example */}
           <div className="mt-8">
-            <div 
+            <div
               className="relative inline-block"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}

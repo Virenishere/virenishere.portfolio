@@ -1,4 +1,3 @@
-
 // Basic usage
 <HoverTooltip
   isVisible={isHovered}
@@ -20,7 +19,6 @@
   rotate={5}
   className="custom-class"
 />
-
 
 // Corner positioning
 <HoverTooltip position="top-left" />

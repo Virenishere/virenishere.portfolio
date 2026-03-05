@@ -4,7 +4,16 @@ import { motion, AnimatePresence } from 'motion/react';
 interface HoverTooltipProps {
   isVisible: boolean;
   text: string;
-  position?: 'top' | 'bottom' | 'left' | 'right' | 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
+  position?:
+    | 'top'
+    | 'bottom'
+    | 'left'
+    | 'right'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'center';
   backgroundColor?: string;
   textColor?: string;
   borderColor?: string;
@@ -32,13 +41,13 @@ const HoverTooltip: React.FC<HoverTooltipProps> = ({
   translateY = 0,
   rotate = 0,
   showArrow = true,
-  children
+  children,
 }) => {
   const finalArrowColor = arrowColor || backgroundColor;
 
   const getPositionStyles = () => {
     const baseStyle: React.CSSProperties = {};
-    
+
     switch (position) {
       case 'top':
         baseStyle.bottom = `${offset}px`;
@@ -106,7 +115,12 @@ const HoverTooltip: React.FC<HoverTooltipProps> = ({
       case 'top-left':
       case 'top-right':
         arrowStyle.top = '100%';
-        arrowStyle.left = position === 'top' ? '50%' : position === 'top-left' ? '20px' : 'auto';
+        arrowStyle.left =
+          position === 'top'
+            ? '50%'
+            : position === 'top-left'
+              ? '20px'
+              : 'auto';
         arrowStyle.right = position === 'top-right' ? '20px' : 'auto';
         arrowStyle.transform = position === 'top' ? 'translateX(-50%)' : 'none';
         arrowStyle.borderLeft = '10px solid transparent';
@@ -117,9 +131,15 @@ const HoverTooltip: React.FC<HoverTooltipProps> = ({
       case 'bottom-left':
       case 'bottom-right':
         arrowStyle.bottom = '100%';
-        arrowStyle.left = position === 'bottom' ? '50%' : position === 'bottom-left' ? '20px' : 'auto';
+        arrowStyle.left =
+          position === 'bottom'
+            ? '50%'
+            : position === 'bottom-left'
+              ? '20px'
+              : 'auto';
         arrowStyle.right = position === 'bottom-right' ? '20px' : 'auto';
-        arrowStyle.transform = position === 'bottom' ? 'translateX(-50%)' : 'none';
+        arrowStyle.transform =
+          position === 'bottom' ? 'translateX(-50%)' : 'none';
         arrowStyle.borderLeft = '10px solid transparent';
         arrowStyle.borderRight = '10px solid transparent';
         arrowStyle.borderBottom = `15px solid ${finalArrowColor}`;
@@ -180,7 +200,7 @@ const HoverTooltip: React.FC<HoverTooltipProps> = ({
             x: 0,
             scale: 1,
             transition: {
-              type: "spring",
+              type: 'spring',
               stiffness: 260,
               damping: 20,
             },
@@ -189,11 +209,11 @@ const HoverTooltip: React.FC<HoverTooltipProps> = ({
           style={{
             rotate: rotate,
             zIndex: 1000,
-            whiteSpace: "nowrap",
+            whiteSpace: 'nowrap',
           }}
           className="flex justify-center items-center"
         >
-          <div 
+          <div
             className={`border-solid border-2 shadow-2xl flex justify-center items-center px-4 py-2 absolute z-[10] rounded-xl ${className}`}
             style={{
               backgroundColor: backgroundColor,
@@ -201,7 +221,7 @@ const HoverTooltip: React.FC<HoverTooltipProps> = ({
               ...getPositionStyles(),
             }}
           >
-            <span 
+            <span
               className="font-medium text-base"
               style={{ color: textColor }}
             >
