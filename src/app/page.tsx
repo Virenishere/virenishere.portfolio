@@ -1,7 +1,12 @@
 'use client';
-import Navbar from '@/components/Navbar';
 import IconTest from '@/components/IconTest';
-import ScrollIndicator from '@/components/ScrollIndicator';
+import ScrollIndicator from '@/components/ui/scroll/ScrollIndicator';
+import DesktopNavbar from '@/components/ui/navbar/DesktopNavbar';
+import MobileNavbar from '@/components/ui/navbar/MobileNavbar';
+import Introduction from '@/components/Introduction';
+import Skills from '@/components/Skills';
+import Work from '@/components/Work';
+import Projects from '@/components/Projects';
 
 import HomeSection from '@/components/HomeSection';
 
@@ -10,13 +15,17 @@ export default function Home() {
     <main className="bg-background text-foreground min-h-screen relative scroll-smooth select-none transition-colors duration-300">
       {/* navbar  */}
       <Navbar />
-
       {/* scrollindicator  */}
       <ScrollIndicator />
-
       {/* Home Section */}
       <HomeSection />
-
+      <ScrollIndicator />
+      {/* Home Section */}
+      <Introduction />
+      {/* skill section  */}
+      <Skills />
+      {/* work section  */}
+      <Work />
       {/* Work Section */}
       <section
         id="work"
@@ -43,7 +52,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <Projects />
       {/* Projects Section */}
       <section
         id="projects"
@@ -58,9 +67,8 @@ export default function Home() {
             this section when clicked.
           </p>
         </div>
-      </section>
-
-      {/* Blogs Section */}
+      </section>{' '}
+      *{/* Blogs Section */}
       <section
         id="blogs"
         className="min-h-screen flex items-center justify-center bg-muted/20"
@@ -74,11 +82,6 @@ export default function Home() {
             navigation here.
           </p>
         </div>
-      </section>
-
-      {/* Icon Test Section - You can remove this later */}
-      <section className="py-20">
-        <IconTest />
       </section>
     </main>
   );

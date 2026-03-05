@@ -1,6 +1,6 @@
 import { Project } from '@/types/types';
 
-const Projects: Project[] = [
+const projectsData: Project[] = [
   {
     id: 'project-1',
     title: 'E-Commerce Platform',
@@ -57,7 +57,7 @@ const Projects: Project[] = [
   },
 ];
 
-export default Projects;
+export default projectsData;
 
 // Helper functions
 export const getFeaturedProjects = () =>
