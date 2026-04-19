@@ -14,12 +14,15 @@ export interface Project {
   featured?: boolean;
 }
 
-export interface Skill {
-  id: string;
-  name: string;
-  category: 'frontend' | 'backend' | 'database' | 'tools' | 'cloud' | 'other';
-  level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
-  icon: LucideIcon;
+export interface Experience {
+  title: string;
+  tip: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+  description: string[];
+  lang: string[];
 }
 
 export interface BlogPost {
@@ -30,7 +33,7 @@ export interface BlogPost {
   author: string;
   publishedDate: string;
   tags: string[];
-  readTime: number; // in minutes
+  readTime: number;
   featured?: boolean;
   image?: string;
   slug: string;

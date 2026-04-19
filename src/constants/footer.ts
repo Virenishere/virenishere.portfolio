@@ -1,7 +1,7 @@
-import { FooterData } from '@/types/types';
+import type { FooterData } from '@/types/types';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
-const FooterData: FooterData = {
+const footerData: FooterData = {
   personalInfo: {
     name: 'Your Name',
     email: 'your.email@example.com',
@@ -45,4 +45,4 @@ const FooterData: FooterData = {
   copyright: `© ${new Date().getFullYear()} Your Name. All rights reserved.`,
 };
 
-export default FooterData;
+export default footerData;

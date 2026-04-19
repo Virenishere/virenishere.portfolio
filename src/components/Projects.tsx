@@ -1,19 +1,33 @@
-import React from "react";
-import projectsData from "@/constants/project";
+'use client';
 
-export default function Projects(){
-    return(
-        <section 
+import React from 'react';
+import { SectionWrapper } from './SectionWrapper';
+import { Tip } from './ui/tip/Tip';
+import projectsData from '@/constants/project';
+import { ProjectCard } from './ProjectCard';
+
+export default function Projects() {
+  return (
+    <SectionWrapper>
+      <div
+        className="flex justify-center items-center flex-col"
         id="projects"
-        className="min-h-screen flex flex-col items-center justify-center text-white">
-            <h2 className="text-5xl">projects</h2>
-            {projectsData.map((project)=>(
-                <div key={project.id} className="mb-6">
-                    <h2>{project.title}</h2>
-                    <p>{project.tip}</p>
-                    <p>{project.description}</p>
-                </div>
+      >
+        <Tip tip="Some of the works I did" className="self-center">
+          <h1 className="font-jetbrain text-center text-5xl mb-16">
+            <span className="text-green-300">code</span>
+            <span className="text-foreground">:</span>
+            <span className="text-cyan-300">projects</span>
+          </h1>
+        </Tip>
+        <div className="flex justify-center items-center w-full">
+          <div className="grid md:grid-cols-2 gap-4 w-full">
+            {projectsData.map((proj, index) => (
+              <ProjectCard key={index} {...proj} />
             ))}
-        </section>
-    )
+          </div>
+        </div>
+      </div>
+    </SectionWrapper>
+  );
 }

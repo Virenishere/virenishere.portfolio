@@ -1,108 +1,73 @@
 'use client';
 
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useAnimationFrame,
-} from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 export default function CursorAnimation() {
-  const initialized = useRef(false);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const [isClicked, setIsClicked] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const opacity = useMotionValue(0);
-
-  // real mouse position
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  // delayed cursor position (apple smooth lag)
-  const cursorX = useMotionValue(0);
-  const cursorY = useMotionValue(0);
-
-  // smooth physics
-  const smoothX = useSpring(cursorX, {
-    stiffness: 250,
-    damping: 20,
-    mass: 0.4,
-  });
-
-  const smoothY = useSpring(cursorY, {
-    stiffness: 120,
-    damping: 20,
-    mass: 0.4,
-  });
-
-  // scale animation (NO react state)
-  const scale = useMotionValue(1);
-  const smoothScale = useSpring(scale, {
-    stiffness: 260,
-    damping: 18,
-  });
-
-  // track mouse
   useEffect(() => {
-    const move = (e: PointerEvent) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
+    const el = cursorRef.current;
+    if (!el) return;
 
-      if (!initialized.current) {
-        cursorX.set(e.clientX);
-        cursorY.set(e.clientY);
-        opacity.set(1); // show cursor only after sync
-        initialized.current = true;
-      }
-    };
-    window.addEventListener('pointermove', move);
+    if (window.matchMedia('(pointer: coarse)').matches) return;
 
-    return () => window.removeEventListener('pointermove', move);
-  }, []);
+    let rafId = 0;
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
 
-  // Apple-style smooth follow loop
-  useAnimationFrame(() => {
-    const x = cursorX.get();
-    const y = cursorY.get();
-
-    // lerp movement (secret sauce)
-    cursorX.set(x + (mouseX.get() - x) * 0.3);
-    cursorY.set(y + (mouseY.get() - y) * 0.3);
-  });
-
-  // hover detection (magnetic trigger)
-  useEffect(() => {
-    const hover = (e: Event) => {
-      const target = e.target as HTMLElement;
-
-      if (target.closest('.cursor-hover')) {
-        scale.set(2);
-      } else {
-        scale.set(1);
-      }
+    const onMove = (e: MouseEvent) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+      if (!isVisible) setIsVisible(true);
     };
 
-    document.addEventListener('mouseover', hover);
-    return () => document.removeEventListener('mouseover', hover);
-  }, []);
+    const onLeave = () => setIsVisible(false);
+    const onEnter = () => setIsVisible(true);
+
+    const onClick = () => {
+      setIsClicked(true);
+      window.setTimeout(() => setIsClicked(false), 120);
+    };
+
+    const tick = () => {
+      currentX += (targetX - currentX) * 0.22;
+      currentY += (targetY - currentY) * 0.22;
+      const w = el.offsetWidth;
+      const h = el.offsetHeight;
+      el.style.transform = `translate3d(${currentX - w / 2}px, ${currentY - h / 2}px, 0)`;
+      rafId = window.requestAnimationFrame(tick);
+    };
+
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('click', onClick);
+    document.addEventListener('mouseleave', onLeave);
+    document.addEventListener('mouseenter', onEnter);
+    rafId = window.requestAnimationFrame(tick);
+
+    return () => {
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('click', onClick);
+      document.removeEventListener('mouseleave', onLeave);
+      document.removeEventListener('mouseenter', onEnter);
+      window.cancelAnimationFrame(rafId);
+    };
+  }, [isVisible]);
 
   return (
-    <motion.div
-      style={{
-        translateX: smoothX,
-        translateY: smoothY,
-        scale: smoothScale,
-        opacity,
-      }}
-      className="
-        pointer-events-none
-        fixed top-0 left-0
-        z-[9999]
-        h-12 w-12
-        -translate-x-1/2 -translate-y-1/2
-        rounded-full
-        border-4 border-white/80
-        will-change-transform
-      "
+    <div
+      ref={cursorRef}
+      style={{ willChange: 'transform' }}
+      className={cn(
+        'pointer-events-none fixed top-0 left-0 z-[60] hidden md:block rounded-full border-[3px] border-purple-500 bg-transparent transition-[width,height,opacity] duration-150',
+        isClicked ? 'w-7 h-7' : 'w-10 h-10',
+        isVisible ? 'opacity-100' : 'opacity-0'
+      )}
+      aria-hidden
     />
   );
 }

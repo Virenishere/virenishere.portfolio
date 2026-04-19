@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Full-Stack Engineer",
+    "company": "Peeker AI",
+    "tip": "Currently working here",
+    "startDate": "Nov 2025",
+    "endDate": "Present",
+    "location": "Remote, New York, USA",
+    "description": [
+      "Architected an event-driven Admin Dashboard in React (TypeScript) and Node.js/Express, unifying SaaS subscription management, webhook routing and live analytics for the core operations team.",
+      "Built asynchronous job pipelines for 7 platforms (Stripe, PostHog, Cal.com, Make.com and others) using BullMQ and Redis, cutting failed job rates by 90% via retry logic and dead-letter queues.",
+      "Modeled real-time application data in Convex for reactive dashboards and webhook-driven subscription state, eliminating polling on the operations UI.",
+      "Developed a GPT-4 powered analytics backend (AI-SDK) that queries live business data and generates structured revenue and churn reports, saving ~3 hours of manual work per week.",
+      "Containerized backend services with Docker, deployed to Hetzner Cloud and Cloudflare, and set up CI/CD with GitHub Actions and automated type-checking for zero-downtime production releases."
+    ],
+    "lang": [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "React",
+      "Next.js",
+      "Convex",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "BullMQ",
+      "AI-SDK",
+      "GPT-4",
+      "TanStack Query",
+      "Zustand",
+      "Tailwind",
+      "shadcn/UI",
+      "Docker",
+      "CI/CD",
+      "Cloudflare",
+      "Hetzner",
+      "Bash",
+      "Git",
+      "Stripe",
+      "PostHog",
+      "Postman",
+      "JIRA"
+    ]
+  },
+  {
+    "title": "Full-Stack Developer Intern",
+    "company": "Loop It Methods Pvt. Ltd.",
+    "tip": "No-code Website Builder",
+    "startDate": "Aug 2025",
+    "endDate": "Nov 2025",
+    "location": "Onsite, Noida, India",
+    "description": [
+      "Delivered a no-code Website Builder with a recursive component tree engine supporting infinite nested draggable elements, removing the need for manual HTML authoring by non-technical users.",
+      "Engineered a Rich Text Editor from scratch with a custom AST-based document model and element inserter (buttons, cards, media embeds, HTML/CSS widget injection), cutting content creation time by 40%.",
+      "Improved rendering performance using React, Next.js and Zustand for centralized state management, resulting in faster interaction response across all major editor flows.",
+      "Integrated Cloudflare R2 for media storage and deployed the builder on Vercel with PostgreSQL-backed project persistence."
+    ],
+    "lang": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Zustand",
+      "TanStack Query",
+      "Tailwind",
+      "shadcn/UI",
+      "PostgreSQL",
+      "Prisma",
+      "Cloudflare",
+      "Vercel",
+      "AST",
+      "Git",
+      "Bash"
+    ]
+  },
+  {
+    "title": "Full-Stack Developer Intern",
+    "company": "Image Pipeline",
+    "tip": "Text-to-Image generation backend",
+    "startDate": "Jan 2025",
+    "endDate": "Apr 2025",
+    "location": "Remote, Delaware, USA",
+    "description": [
+      "Built a concurrent Text-to-Image generation backend integrating SDXL LLM APIs, supporting inpainting, upscaling and style switching for hundreds of simultaneous beta users.",
+      "Implemented a full-featured canvas application in Next.js, Zustand and TanStack Query with client-side caching strategies that maintained consistent frame rates during multi-tool editing sessions.",
+      "Integrated stateless Clerk Authentication backed by DynamoDB for session management and Tawk.to live chat, improving support response time and 30-day user retention.",
+      "Deployed backend workers on AWS (Lambda + S3 + DynamoDB) with SQS queues for async image jobs and set up CI/CD via GitHub Actions."
+    ],
+    "lang": [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Node.js",
+      "Express",
+      "Zustand",
+      "TanStack Query",
+      "Tailwind",
+      "AWS",
+      "Lambda",
+      "S3",
+      "DynamoDB",
+      "SQS",
+      "Clerk",
+      "SDXL",
+      "AI-SDK",
+      "CI/CD",
+      "Git",
+      "Bash"
+    ]
+  },
+  {
+    "title": "Technical Support Engineer",
+    "company": "Teleperformance (Adobe)",
+    "tip": "Adobe enterprise support",
+    "startDate": "Dec 2022",
+    "endDate": "Jul 2024",
+    "location": "Onsite, Gurugram, India",
+    "description": [
+      "Partnered with Adobe engineering via JIRA to diagnose and resolve software defects across creative workflows, After Effects scripting and enterprise account provisioning through Active Directory.",
+      "Reduced average case resolution time by 40% and raised CSAT by 25% by introducing structured troubleshooting decision trees adopted across a 100+ agent team.",
+      "Authored technical training documentation and led knowledge-transfer sessions for 50+ new hires, cutting ramp-up time from 6 weeks to under 4 weeks.",
+      "Wrote Bash/PowerShell utilities to automate log collection and recurring diagnostic steps, reducing repeated manual work per ticket."
+    ],
+    "lang": [
+      "Bash",
+      "PowerShell",
+      "JIRA",
+      "ServiceNow",
+      "Active Directory",
+      "Adobe Creative Cloud",
+      "After Effects Scripting",
+      "Windows",
+      "macOS",
+      "SQL"
+    ]
+  }
+]
