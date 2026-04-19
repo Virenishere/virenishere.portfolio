@@ -56,12 +56,12 @@ pnpm dev              # http://localhost:3000
 
 ### Scripts
 
-| Command | Description |
-|---|---|
-| `pnpm dev` | Start Next.js dev server |
-| `pnpm build` | Production build |
-| `pnpm start` | Run the built app |
-| `pnpm lint` | Run ESLint |
+| Command      | Description              |
+| ------------ | ------------------------ |
+| `pnpm dev`   | Start Next.js dev server |
+| `pnpm build` | Production build         |
+| `pnpm start` | Run the built app        |
+| `pnpm lint`  | Run ESLint               |
 
 ### Environment
 
