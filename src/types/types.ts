@@ -10,6 +10,7 @@ export interface Project {
   lang: string[];
   link: string;
   githubLink?: string;
+  githubLinks?: { label: string; url: string }[];
   image?: string;
   featured?: boolean;
 }

@@ -25,7 +25,7 @@ export default function Skills() {
           {skillRows.map((row, idx) => (
             <div
               key={idx}
-              className="flex flex-wrap gap-6 md:gap-10 justify-center items-center"
+              className="flex flex-nowrap gap-3 md:gap-6 justify-center items-center"
             >
               {row.skills.map((skill) => (
                 <SkillCard

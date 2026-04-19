@@ -36,7 +36,7 @@ export type SkillRow = {
 export const skillRows: SkillRow[] = [
   {
     shadow: '#CAA6F7',
-    minWidth: 'min-w-[130px] md:min-w-[160px]',
+    minWidth: 'min-w-[90px] md:min-w-[115px]',
     skills: [
       { name: 'JavaScript', logo: <Javascript /> },
       { name: 'TypeScript', logo: <Typescript /> },
@@ -48,7 +48,7 @@ export const skillRows: SkillRow[] = [
   },
   {
     shadow: '#34c07c',
-    minWidth: 'min-w-[140px] md:min-w-[170px]',
+    minWidth: 'min-w-[100px] md:min-w-[130px]',
     skills: [
       { name: 'Node.js', logo: <Nodejs /> },
       { name: 'Express', logo: <Express /> },
@@ -59,7 +59,7 @@ export const skillRows: SkillRow[] = [
   },
   {
     shadow: '#2da4b9',
-    minWidth: 'min-w-[150px] md:min-w-[180px]',
+    minWidth: 'min-w-[115px] md:min-w-[150px]',
     skills: [
       { name: 'Docker', logo: <Docker /> },
       { name: 'MongoDB', logo: <Mongodb /> },
@@ -69,7 +69,7 @@ export const skillRows: SkillRow[] = [
   },
   {
     shadow: '#dcab70',
-    minWidth: 'min-w-[150px] md:min-w-[180px]',
+    minWidth: 'min-w-[130px] md:min-w-[170px]',
     skills: [
       { name: 'Convex', logo: <Convex /> },
       { name: 'AI-SDK', logo: <Ai /> },
@@ -78,7 +78,7 @@ export const skillRows: SkillRow[] = [
   },
   {
     shadow: '#dc8070',
-    minWidth: 'min-w-[150px] md:min-w-[180px]',
+    minWidth: 'min-w-[150px] md:min-w-[200px]',
     skills: [
       { name: 'Bash', logo: <Bash /> },
       { name: 'Git', logo: <Git /> },

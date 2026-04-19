@@ -336,7 +336,6 @@ const useDiscord = (userId: string) => {
     const timeoutId = setTimeout(() => {
       if (!cancelled && !receivedRef.current) {
         setTimedOut(true);
-        // eslint-disable-next-line no-console
         console.warn(
           '[DiscordPresence] No data from Lanyard after 5s — make sure your Discord account is in https://discord.gg/lanyard and NEXT_PUBLIC_DISCORD_USER_ID is your snowflake ID.'
         );

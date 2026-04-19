@@ -46,6 +46,21 @@ export const ProjectCard = (project: Project) => {
               <Github className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
             </Link>
           )}
+          {project?.githubLinks?.map((repo) => (
+            <Tip key={repo.url} tip={repo.label}>
+              <Link
+                href={repo.url}
+                target="_blank"
+                aria-label={`GitHub repo ${repo.label}`}
+                className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors"
+              >
+                <Github className="w-4 h-4" />
+                <span className="text-[10px] md:text-[11px] font-jetbrain">
+                  {repo.label}
+                </span>
+              </Link>
+            </Tip>
+          ))}
         </div>
       </div>
 

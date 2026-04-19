@@ -10,6 +10,25 @@
     "featured": true
   },
   {
+    "id": "dumpsxpert",
+    "title": "DumpsXpert",
+    "tip": "IT certification e-commerce & exam platform",
+    "description": "A production Next.js 14 storefront and exam platform for IT certification content, with a timed online exam engine, a schema-driven admin CMS across 40+ collections, Razorpay + PayPal checkout with server-side verification, and a mobile/SEO pipeline (dynamic sitemap, ISR, bundle analysis).",
+    "lang": [
+      "Next.js",
+      "React",
+      "MongoDB",
+      "Mongoose",
+      "NextAuth",
+      "Razorpay",
+      "PayPal",
+      "Cloudinary",
+      "Tailwind"
+    ],
+    "link": "https://www.dumpsxpert.com/",
+    "featured": true
+  },
+  {
     "id": "brainpin",
     "title": "BrainPin",
     "tip": "Full-stack content management system",
@@ -46,8 +65,35 @@
     "link": "https://build-folio.vercel.app/",
     "githubLink": "https://github.com/Virenishere/BuildFolio",
     "featured": true
+  },
+  {
+    "id": "linkedin-lead-gen",
+    "title": "LinkedIn Lead Gen SaaS",
+    "tip": "Multi-tenant LinkedIn outbound automation",
+    "description": "A multi-tenant SaaS that automates LinkedIn outbound via a BullMQ + Redis queue engine with per-account rate limits, randomised delays and retry/DLQ handling. Unipile powers send/receive, OpenAI personalises copy, and Socket.IO streams a unified inbox. Billed on Stripe.",
+    "lang": [
+      "TypeScript",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "BullMQ",
+      "Socket.IO",
+      "Unipile",
+      "OpenAI",
+      "Stripe",
+      "Next.js",
+      "React"
+    ],
+    "githubLinks": [
+      {
+        "label": "BE",
+        "url": "https://github.com/connect-bloq6/LinkedIn-BE"
+      },
+      {
+        "label": "FE",
+        "url": "https://github.com/connect-bloq6/LinkedIn-FE"
+      }
+    ]
   }
 ]
-
-
-

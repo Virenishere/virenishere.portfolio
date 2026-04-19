@@ -34,7 +34,7 @@ const DesktopNavbar = () => {
                 className={cn(
                   'font-jetbrain text-xl',
                   item.to === hoveredPath
-                    ? 'text-white'
+                    ? 'text-black'
                     : 'text-foreground'
                 )}
               >
@@ -42,7 +42,7 @@ const DesktopNavbar = () => {
               </span>
               {item.to === hoveredPath && (
                 <motion.div
-                  className="absolute bottom-0 left-0 h-full bg-[#CBA6F7]/70 rounded-full -z-10"
+                  className="absolute bottom-0 left-0 h-full bg-white rounded-full -z-10"
                   layoutId="navbar"
                   aria-hidden="true"
                   style={{ width: '100%' }}

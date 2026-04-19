@@ -26,14 +26,14 @@ export const SkillCard = ({
       <div
         style={{ boxShadow: `5px 5px 0px 1px ${shadow}` }}
         className={cn(
-          'flex relative z-[10] justify-center gap-2 items-center bg-stone-800/20 px-2.5 py-1.5 min-w-[110px] md:min-w-[140px] border-[1px] border-gray-700 border-solid rounded-[5px]',
+          'flex relative z-[10] justify-center gap-1.5 items-center bg-stone-800/20 px-2 py-1.5 min-w-[90px] md:min-w-[110px] border-[1px] border-gray-700 border-solid rounded-[5px]',
           contClass
         )}
       >
-        <div className="flex items-center justify-center w-5 h-5 md:w-6 md:h-6 shrink-0 [&_svg]:w-full [&_svg]:h-full">
+        <div className="flex items-center justify-center w-4 h-4 md:w-5 md:h-5 shrink-0 [&_svg]:w-full [&_svg]:h-full">
           {logo}
         </div>
-        <p className="font-grotesk text-gray-200 text-xs md:text-sm">{skill}</p>
+        <p className="font-grotesk text-gray-200 text-[11px] md:text-sm whitespace-nowrap">{skill}</p>
       </div>
     </motion.div>
   );
