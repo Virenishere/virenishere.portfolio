@@ -1,0 +1,53 @@
+[
+  {
+    "id": "nextflow",
+    "title": "NextFlow",
+    "tip": "Workflow automation platform",
+    "description": "A Node.js REST API backend with a stateful task orchestration engine that tracks execution across concurrent multi-step automation jobs, with low-latency event routing and sub-second loads on Vercel.",
+    "lang": ["Node.js", "TypeScript", "Next.js", "REST API", "Vercel"],
+    "link": "https://nextflow.virenishere.com",
+    "githubLink": "https://github.com/Virenishere/NextFlow",
+    "featured": true
+  },
+  {
+    "id": "brainpin",
+    "title": "BrainPin",
+    "tip": "Full-stack content management system",
+    "description": "A RESTful Express + MongoDB backend with JWT-based stateless auth, Zod validation and bcryptjs hashing. Tuned indexing keeps read latency under 200ms; the React frontend uses Zustand, Radix UI and Framer Motion with full theme support.",
+    "lang": [
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Zod",
+      "React",
+      "Zustand",
+      "Radix UI",
+      "Framer Motion"
+    ],
+    "link": "https://brainpin.vercel.app",
+    "githubLink": "https://github.com/Virenishere/Brainpin",
+    "featured": true
+  },
+  {
+    "id": "buildfolio",
+    "title": "BuildFolio",
+    "tip": "AI-powered resume builder",
+    "description": "A modular Node.js + TypeScript content generation pipeline that parses user input, invokes LLM APIs and produces a complete resume draft in under 10 seconds, with a Cerebras-backed Python microservice for context-aware suggestions.",
+    "lang": [
+      "TypeScript",
+      "Node.js",
+      "Cerebras LLM",
+      "Python",
+      "React",
+      "Tailwind",
+      "Zustand",
+      "Framer Motion"
+    ],
+    "link": "https://build-folio.vercel.app/",
+    "githubLink": "https://github.com/Virenishere/BuildFolio",
+    "featured": true
+  }
+]
+
+
+

@@ -1,8 +1,14 @@
+'use client';
+
 import React from 'react';
-import ProfilePic from './ui/profilepic/ProfilePic';
-import AboutMe from '@/constants/aboutme';
 import ReachMe from './ReachMe';
-import DiscordUI from './DiscordUI';
+import { SectionWrapper } from './SectionWrapper';
+import { DiscordPresence } from './ui/discord/DiscordPresence';
+import { Tip } from './ui/tip/Tip';
+import { CardContainer, CardItem } from './ui/3d-card/ThreeDCard';
+import Image from 'next/image';
+import profilepic from '@/assets/images/pfp.jpg';
+import site from '@/data/site.json';
 
 export default function Introduction() {
   return (
@@ -27,6 +33,6 @@ export default function Introduction() {
           {AboutMe.Info}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

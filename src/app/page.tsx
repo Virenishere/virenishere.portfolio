@@ -1,17 +1,21 @@
 'use client';
-import IconTest from '@/components/IconTest';
-import ScrollIndicator from '@/components/ui/scroll/ScrollIndicator';
+
 import DesktopNavbar from '@/components/ui/navbar/DesktopNavbar';
 import MobileNavbar from '@/components/ui/navbar/MobileNavbar';
 import Introduction from '@/components/Introduction';
 import Skills from '@/components/Skills';
 import Work from '@/components/Work';
 import Projects from '@/components/Projects';
+import Stats from '@/components/Stats';
+import { Footer } from '@/components/Footer';
+import { ResumeButton } from '@/components/ResumeButton';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 
 import HomeSection from '@/components/HomeSection';
 
 export default function Home() {
   return (
+<<<<<<< HEAD
     <main className="bg-background text-foreground min-h-screen relative scroll-smooth select-none transition-colors duration-300">
       {/* navbar  */}
       <Navbar />
@@ -83,6 +87,19 @@ export default function Home() {
           </p>
         </div>
       </section>
+=======
+    <main className="min-h-screen relative scroll-smooth select-none bg-[#000]">
+      <ScrollProgress />
+      <DesktopNavbar />
+      <ResumeButton />
+      <Introduction />
+      <Stats />
+      <Skills />
+      <Work />
+      <Projects />
+      <Footer />
+      <MobileNavbar />
+>>>>>>> d28c7c4 (Updated Next.js configuration to allow remote image patterns, added new dependencies for progress indicators, and created new logo components. Refined global styles and layout structure, including custom scrollbar and smooth scrolling effects.)
     </main>
   );
 }

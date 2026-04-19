@@ -1,9 +1,16 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useState } from 'react';
+import { motion } from 'motion/react';
 import { Link } from 'react-scroll';
-import Navlinks from '@/constants/navlinks';
+import { cn } from '@/lib/utils';
+
+const NavItems = [
+  { path: '/', name: '/', to: 'home' },
+  { path: '/skill', name: 'skills', to: 'skill' },
+  { path: '/work', name: 'work', to: 'work' },
+  { path: '/projects', name: 'projects', to: 'projects' },
+];
 
 const DesktopNavbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -152,7 +159,6 @@ const DesktopNavbar = () => {
             }`}
           >
             <Link
-              to={targetId}
               spy={true}
               smooth={true}
               offset={-100}
@@ -163,10 +169,10 @@ const DesktopNavbar = () => {
             >
               {label}
             </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+          ))}
+        </nav>
+      </div>
+    </div>
   );
 };
 

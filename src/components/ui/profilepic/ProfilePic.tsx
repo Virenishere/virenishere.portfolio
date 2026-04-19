@@ -20,7 +20,7 @@ export default function ProfilePic() {
 
   if (!mounted) return null;
 
-  function handleMouseMove(e) {
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
 
     const x = e.clientX - rect.left;
