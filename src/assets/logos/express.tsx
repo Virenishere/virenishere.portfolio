@@ -22,7 +22,7 @@ export const Express = () => {
         font-weight="none"
         font-size="none"
         text-anchor="none"
-        style={{ mixBlendMode: "normal" }}
+        style={{ mixBlendMode: 'normal' }}
       >
         <g transform="scale(5.33333,5.33333)">
           <path d="M23.697,37.56h1.18c0.84,0 1.631,-0.392 2.139,-1.061l7.485,-9.847l7.485,9.847c0.508,0.668 1.299,1.061 2.139,1.061h1.18l-9.549,-12.56l9.121,-12h-1.18c-0.84,0 -1.631,0.392 -2.139,1.061l-7.058,9.286l-7.059,-9.287c-0.508,-0.668 -1.299,-1.06 -2.139,-1.06h-1.18l9.121,12z"></path>

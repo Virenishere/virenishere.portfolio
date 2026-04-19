@@ -1,11 +1,6 @@
 'use client';
 
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from 'motion/react';
+import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import { Clipboard, Github, Mail, Twitter, User } from 'lucide-react';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
@@ -18,7 +13,11 @@ const icons = [
     name: 'github',
     icon: <Github className="w-6 h-6" />,
     handler: () => {
-      window.open('https://github.com/virenishere', '_blank', 'noopener,noreferrer');
+      window.open(
+        'https://github.com/virenishere',
+        '_blank',
+        'noopener,noreferrer'
+      );
     },
   },
   {
@@ -63,9 +62,7 @@ export default function ReachMe() {
         {AboutMe.FirstName}
       </h1>
       <div className="flex flex-col gap-4 mt-5 md:px-3">
-        <h3 className="font-jetbrain text-xl md:text-2xl">
-          {AboutMe.Role}.
-        </h3>
+        <h3 className="font-jetbrain text-xl md:text-2xl">{AboutMe.Role}.</h3>
         <h3 className="font-jetbrain text-xl md:text-2xl">
           {AboutMe.ShortIntro}
         </h3>

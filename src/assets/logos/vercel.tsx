@@ -6,7 +6,7 @@ export const Vercel = () => {
       xmlns="http://www.w3.org/2000/svg"
       fill="white"
       className="h-4"
-      style={{ color: "white" }}
+      style={{ color: 'white' }}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
@@ -15,13 +15,13 @@ export const Vercel = () => {
         strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
-        {" "}
+        {' '}
         <g>
-          {" "}
+          {' '}
           <polygon fill="#FFFFFFF" points="128 0 256 221.705007 0 221.705007">
-            {" "}
-          </polygon>{" "}
-        </g>{" "}
+            {' '}
+          </polygon>{' '}
+        </g>{' '}
       </g>
     </svg>
   );

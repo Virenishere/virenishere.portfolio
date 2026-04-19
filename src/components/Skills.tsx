@@ -41,7 +41,11 @@ export default function Skills() {
           <div className="flex justify-center items-center">
             <SkillCard
               skill="More"
-              logo={<span className="font-jetbrain text-lg text-gray-200">&amp;</span>}
+              logo={
+                <span className="font-jetbrain text-lg text-gray-200">
+                  &amp;
+                </span>
+              }
               contClass="min-w-[150px] md:min-w-[180px]"
               shadow="#dc8070"
             />

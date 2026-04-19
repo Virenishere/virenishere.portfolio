@@ -33,9 +33,7 @@ const DesktopNavbar = () => {
               <span
                 className={cn(
                   'font-jetbrain text-xl',
-                  item.to === hoveredPath
-                    ? 'text-black'
-                    : 'text-foreground'
+                  item.to === hoveredPath ? 'text-black' : 'text-foreground'
                 )}
               >
                 {item.name}

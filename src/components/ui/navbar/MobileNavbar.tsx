@@ -50,9 +50,7 @@ export default function MobileNavbar() {
                   smooth={true}
                   duration={500}
                   onClick={() => {
-                    setSelected(
-                      selected === icon.to ? 'home' : icon.to
-                    );
+                    setSelected(selected === icon.to ? 'home' : icon.to);
                   }}
                   className="text-white"
                 >

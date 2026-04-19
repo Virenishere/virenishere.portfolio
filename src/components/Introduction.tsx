@@ -68,9 +68,8 @@ export default function Introduction() {
                   Hey, I&apos;m Virender — a{' '}
                   <Tip name="27" tip="yes that's correct" />
                   -year-old Full Stack Engineer from India. I&apos;m currently
-                  working at{' '}
-                  <Tip name="Peeker AI" tip="building cool stuff" />
-                  . I love creating tools that help developers move faster and
+                  working at <Tip name="Peeker AI" tip="building cool stuff" />.
+                  I love creating tools that help developers move faster and
                   build smarter. In my free time, you&apos;ll usually find me
                   watching anime, reading manga, or hitting the gym.
                 </div>

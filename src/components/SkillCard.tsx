@@ -33,7 +33,9 @@ export const SkillCard = ({
         <div className="flex items-center justify-center w-4 h-4 md:w-5 md:h-5 shrink-0 [&_svg]:w-full [&_svg]:h-full">
           {logo}
         </div>
-        <p className="font-grotesk text-gray-200 text-[11px] md:text-sm whitespace-nowrap">{skill}</p>
+        <p className="font-grotesk text-gray-200 text-[11px] md:text-sm whitespace-nowrap">
+          {skill}
+        </p>
       </div>
     </motion.div>
   );
