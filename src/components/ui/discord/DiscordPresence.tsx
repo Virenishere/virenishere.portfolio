@@ -302,11 +302,18 @@ const DiscordPresence: React.FC<DiscordPresenceProp> = ({
           <span className="mb-2">Elapsed : {elapsed}</span>
         )}
         <div className="flex flex-wrap gap-x-1 gap-y-0.5 flex-row items-center w-full">
-          <p className={cn('text-xs sm:text-sm md:text-xl truncate max-w-full', userClass)}>
+          <p
+            className={cn(
+              'text-xs sm:text-sm md:text-xl truncate max-w-full',
+              userClass
+            )}
+          >
             @{discordUser?.discord_user?.username || username}
           </p>
           <span className="text-sm md:text-xl hidden sm:inline-block">•</span>
-          <p className={cn('text-xs sm:text-sm md:text-xl', timeClass)}>{time}</p>
+          <p className={cn('text-xs sm:text-sm md:text-xl', timeClass)}>
+            {time}
+          </p>
         </div>
       </div>
     </div>
