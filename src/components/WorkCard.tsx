@@ -10,21 +10,21 @@ export const WorkCard = (work: Experience) => {
       initial={{ scale: 0.9, opacity: 0 }}
       whileTap={{ scale: 0.9 }}
       whileInView={{ scale: 1.02, opacity: 1 }}
-      className="bg-stone-800/20 border-t-[1px] border-foreground border-solid border-l-[1px] px-8 py-4 select-none cursor-pointer rounded-xl shadow-[2px_6px_0px_1px_#8646d7] md:shadow-[6px_6px_0px_1px_#8646d7] md:w-[800px] w-fit flex flex-col mb-[100px]"
+      className="bg-stone-800/20 border-t-[1px] border-foreground border-solid border-l-[1px] px-5 sm:px-8 py-4 select-none cursor-pointer rounded-xl shadow-[2px_6px_0px_1px_#8646d7] md:shadow-[6px_6px_0px_1px_#8646d7] w-full max-w-full lg:max-w-[800px] flex flex-col mb-16 sm:mb-20 md:mb-[100px]"
     >
-      <div className="flex justify-between items-center gap-3 mb-10 w-full">
-        <div className="flex justify-start items-center gap-3">
-          <div className="w-5 h-5 rounded-full bg-cyan-500/30 border border-cyan-400/50" />
-          <h4 className="font-jetbrain text-sm md:text-base mb-1 text-white">
+      <div className="flex justify-between items-start sm:items-center gap-3 mb-8 sm:mb-10 w-full">
+        <div className="flex justify-start items-center gap-2 sm:gap-3 min-w-0">
+          <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-cyan-500/30 border border-cyan-400/50 shrink-0" />
+          <h4 className="font-jetbrain text-xs sm:text-sm md:text-base mb-1 text-white truncate">
             virenishere
           </h4>
         </div>
-        <div className="flex justify-start items-end sm:items-center gap-1 md:gap-3 flex-col sm:flex-row">
-          <h4 className="font-jetbrain text-sm md:text-base text-cyan-300 text-right">
+        <div className="flex justify-end items-end sm:items-center gap-1 md:gap-3 flex-col sm:flex-row shrink-0">
+          <h4 className="font-jetbrain text-xs sm:text-sm md:text-base text-cyan-300 text-right">
             {work.location}
           </h4>
           <span className="sm:flex justify-center items-center hidden"> •</span>
-          <h4 className="font-jetbrain text-base md:text-base text-green-300">
+          <h4 className="font-jetbrain text-xs sm:text-base md:text-base text-green-300">
             {work.startDate}
           </h4>
           <span className="hidden md:inline-block justify-center items-center">
@@ -37,13 +37,18 @@ export const WorkCard = (work: Experience) => {
         </div>
       </div>
       <div className="w-full">
-        <h1 className="text-4xl font-grotesk mb-4">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-grotesk mb-3 sm:mb-4 break-words">
           <Tip tip={work.tip}>{work.company}</Tip>
         </h1>
-        <h2 className="text-2xl font-grotesk">{work.title}</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl font-grotesk">
+          {work.title}
+        </h2>
         <div className="mt-4">
           {work.description.map((desc, index) => (
-            <p key={index} className="text-white text-sm font-jetbrain mt-2">
+            <p
+              key={index}
+              className="text-white text-xs sm:text-sm font-jetbrain mt-2 leading-relaxed"
+            >
               • {desc}
             </p>
           ))}

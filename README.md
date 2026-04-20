@@ -2,7 +2,7 @@
 
 Personal portfolio of **Virender Prasad** — a terminal-inspired developer site with live Discord presence, 3D project cards, an animated skills grid, and a content layer driven entirely by typed JSON/TS constants.
 
-**Live:** [https://virenishere.vercel.app/](https://virenishere.vercel.app/)
+**Live:** [https://virenishere.vercel.app/`](https://virenishere.vercel.app/)
 
 ---
 

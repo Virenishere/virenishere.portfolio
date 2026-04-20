@@ -13,7 +13,7 @@ import ScrollProgress from '@/components/ui/ScrollProgress';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative scroll-smooth select-none bg-[#000]">
+    <main className="min-h-screen relative scroll-smooth select-none bg-[#000] overflow-x-hidden">
       <ScrollProgress />
       <DesktopNavbar />
       <ResumeButton />

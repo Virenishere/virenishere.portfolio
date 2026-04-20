@@ -26,7 +26,7 @@ export const SkillCard = ({
       <div
         style={{ boxShadow: `5px 5px 0px 1px ${shadow}` }}
         className={cn(
-          'flex relative z-[10] justify-center gap-1.5 items-center bg-stone-800/20 px-2 py-1.5 min-w-[90px] md:min-w-[110px] border-[1px] border-gray-700 border-solid rounded-[5px]',
+          'flex relative z-[10] justify-center gap-1.5 items-center bg-stone-800/20 px-2 py-1.5 min-w-[78px] sm:min-w-[90px] md:min-w-[110px] border-[1px] border-gray-700 border-solid rounded-[5px]',
           contClass
         )}
       >

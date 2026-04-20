@@ -14,18 +14,18 @@ export default function Skills() {
         id="skill"
       >
         <Tip tip="there's more trust me" className="self-center">
-          <h1 className="font-jetbrain text-center text-5xl mb-16">
+          <h1 className="font-jetbrain text-center text-3xl sm:text-4xl md:text-5xl mb-10 sm:mb-14 md:mb-16">
             <span className="text-green-300">code</span>
             <span className="text-foreground">:</span>
             <span className="text-cyan-300">skills</span>
           </h1>
         </Tip>
 
-        <div className="flex flex-nowrap flex-col gap-6 md:gap-8 justify-center items-center w-full">
+        <div className="flex flex-col gap-5 sm:gap-6 md:gap-8 justify-center items-center w-full">
           {skillRows.map((row, idx) => (
             <div
               key={idx}
-              className="flex flex-nowrap gap-3 md:gap-6 justify-center items-center"
+              className="flex flex-wrap sm:flex-nowrap gap-2.5 sm:gap-3 md:gap-6 justify-center items-center w-full max-w-full"
             >
               {row.skills.map((skill) => (
                 <SkillCard

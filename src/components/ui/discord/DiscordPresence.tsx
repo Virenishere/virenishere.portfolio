@@ -194,18 +194,18 @@ const DiscordPresence: React.FC<DiscordPresenceProp> = ({
   return (
     <div
       className={cn(
-        'bg-black/90 px-4 py-6 rounded-2xl text-white flex justify-start items-center gap-6 min-w-[320px]',
+        'bg-black/90 px-4 py-6 rounded-2xl text-white flex justify-start items-center gap-4 sm:gap-6 w-full min-w-0',
         containerClass
       )}
     >
       <div
         className={cn(
-          'relative mt-1 min-w-[100px] h-[100px]',
+          'relative mt-1 shrink-0 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] min-w-[80px] sm:min-w-[100px]',
           imageContainerClass
         )}
       >
         {largeImage === '' ? (
-          <div className="bg-gradient-to-br from-stone-700 to-stone-900 w-[100px] h-[100px] rounded-2xl flex items-center justify-center text-3xl font-grotesk text-gray-300 select-none">
+          <div className="bg-gradient-to-br from-stone-700 to-stone-900 w-full h-full rounded-2xl flex items-center justify-center text-3xl font-grotesk text-gray-300 select-none">
             {(username?.[0] || 'V').toUpperCase()}
           </div>
         ) : (
@@ -240,13 +240,13 @@ const DiscordPresence: React.FC<DiscordPresenceProp> = ({
       </div>
       <div
         className={cn(
-          'flex flex-col justify-start items-start w-full',
+          'flex flex-col justify-start items-start w-full min-w-0',
           detailContainerClass
         )}
       >
         <h1
           className={cn(
-            'font-grotesk text-lg text-[#ffbe6f] md:text-2xl cursor-pointer leading-tight',
+            'font-grotesk text-base sm:text-lg text-[#ffbe6f] md:text-2xl cursor-pointer leading-tight break-words w-full',
             activityClass
           )}
         >
@@ -260,7 +260,7 @@ const DiscordPresence: React.FC<DiscordPresenceProp> = ({
         </h1>
         <h3
           className={cn(
-            'md:text-xl text-md mb-2',
+            'md:text-xl text-sm sm:text-md mb-2 break-words w-full',
             isSpotify && 'mb-3',
             isNoActivity && 'mb-0',
             detailsClass
@@ -301,12 +301,12 @@ const DiscordPresence: React.FC<DiscordPresenceProp> = ({
         {isActivity && elapsed && (
           <span className="mb-2">Elapsed : {elapsed}</span>
         )}
-        <div className="flex flex-nowrap gap-1 flex-row items-center">
-          <p className={cn('text-sm md:text-xl', userClass)}>
+        <div className="flex flex-wrap gap-x-1 gap-y-0.5 flex-row items-center w-full">
+          <p className={cn('text-xs sm:text-sm md:text-xl truncate max-w-full', userClass)}>
             @{discordUser?.discord_user?.username || username}
           </p>
           <span className="text-sm md:text-xl hidden sm:inline-block">•</span>
-          <p className={cn('text-sm md:text-xl', timeClass)}>{time}</p>
+          <p className={cn('text-xs sm:text-sm md:text-xl', timeClass)}>{time}</p>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const gmailCompose =
 const icons = [
   {
     name: 'github',
-    icon: <Github className="w-6 h-6" />,
+    icon: <Github className="w-5 h-5 sm:w-6 sm:h-6" />,
     handler: () => {
       window.open(
         'https://github.com/virenishere',
@@ -22,21 +22,21 @@ const icons = [
   },
   {
     name: 'email',
-    icon: <Mail className="w-6 h-6" />,
+    icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
     handler: () => {
       window.open(gmailCompose, '_blank', 'noopener,noreferrer');
     },
   },
   {
     name: 'twitter',
-    icon: <Twitter className="w-6 h-6" />,
+    icon: <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />,
     handler: () => {
       window.open('https://x.com/virentwt', '_blank', 'noopener,noreferrer');
     },
   },
   {
     name: "Yup, that's me",
-    icon: <User className="w-6 h-6" />,
+    icon: <User className="w-5 h-5 sm:w-6 sm:h-6" />,
     handler: () => {
       window.open('#');
     },
@@ -57,17 +57,19 @@ export default function ReachMe() {
   );
 
   return (
-    <div>
-      <h1 className="text-sky-200/95 text-3xl md:text-8xl font-bold font-grotesk md:before:content-['///'] before:h-[300px] before:text-[175px] before:text-gray-500/50 before:font-[700] before:-z-10 before:select-none before:translate-x-[-100%] before:translate-y-[-20%] webkit_text_stroke before:opacity-[0.25] before:tracking-[-0.1em] before:absolute text-[65px] md:text-[96px] relative">
+    <div className="w-full min-w-0">
+      <h1 className="text-sky-200/95 font-bold font-grotesk md:before:content-['///'] before:h-[300px] before:text-[175px] before:text-gray-500/50 before:font-[700] before:-z-10 before:select-none before:translate-x-[-100%] before:translate-y-[-20%] webkit_text_stroke before:opacity-[0.25] before:tracking-[-0.1em] before:absolute text-[44px] xs:text-[52px] sm:text-6xl md:text-7xl lg:text-8xl relative break-words leading-[1.05]">
         {AboutMe.FirstName}
       </h1>
-      <div className="flex flex-col gap-4 mt-5 md:px-3">
-        <h3 className="font-jetbrain text-xl md:text-2xl">{AboutMe.Role}.</h3>
-        <h3 className="font-jetbrain text-xl md:text-2xl">
+      <div className="flex flex-col gap-3 sm:gap-4 mt-4 sm:mt-5 md:px-3">
+        <h3 className="font-jetbrain text-base sm:text-lg md:text-2xl">
+          {AboutMe.Role}.
+        </h3>
+        <h3 className="font-jetbrain text-base sm:text-lg md:text-2xl">
           {AboutMe.ShortIntro}
         </h3>
       </div>
-      <div className="flex gap-5 md:gap-8 pl-3 mt-6 md:mt-8 mb-6 md:mb-6">
+      <div className="flex gap-4 sm:gap-5 md:gap-8 pl-1 sm:pl-3 mt-5 sm:mt-6 md:mt-8 mb-5 sm:mb-6">
         {icons.map((icon, index) => (
           <div
             key={index}
@@ -116,9 +118,9 @@ export default function ReachMe() {
           </div>
         ))}
       </div>
-      <div className="w-full border-solid border-[1px] border-gray-200/20 bg-stone-800/20 max-w-full relative flex items-center justify-start h-[70px] rounded-2xl gap-8 mt-4 md:mx-3">
-        <div className="w-[10%] h-full bg-cyan-500 rounded-tl-2xl rounded-bl-2xl" />
-        <h4 className="text-xl md:text-2xl text-cyan-300 font-jetbrain">
+      <div className="w-full border-solid border-[1px] border-gray-200/20 bg-stone-800/20 max-w-full relative flex items-center justify-start h-[60px] sm:h-[70px] rounded-2xl gap-4 sm:gap-8 mt-4 md:mx-3 pr-12">
+        <div className="w-[10%] min-w-[32px] h-full bg-cyan-500 rounded-tl-2xl rounded-bl-2xl shrink-0" />
+        <h4 className="text-base sm:text-xl md:text-2xl text-cyan-300 font-jetbrain truncate">
           npx virenishere
         </h4>
         <Clipboard

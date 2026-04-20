@@ -17,8 +17,8 @@ const DesktopNavbar = () => {
 
   return (
     <div className="md:flex justify-center items-center hidden">
-      <div className="rounded-full mb-12 z-[10000000] backdrop-blur-md px-16 py-6 mt-3">
-        <nav className="flex gap-[100px] relative justify-start w-full z-[100] rounded-lg">
+      <div className="rounded-full mb-8 lg:mb-12 z-[10000000] backdrop-blur-md px-6 md:px-10 lg:px-16 py-4 lg:py-6 mt-3">
+        <nav className="flex gap-10 md:gap-14 lg:gap-[100px] relative justify-start w-full z-[100] rounded-lg">
           {NavItems.map((item) => (
             <Link
               spy={true}
@@ -32,7 +32,7 @@ const DesktopNavbar = () => {
             >
               <span
                 className={cn(
-                  'font-jetbrain text-xl',
+                  'font-jetbrain text-base lg:text-xl',
                   item.to === hoveredPath ? 'text-black' : 'text-foreground'
                 )}
               >
