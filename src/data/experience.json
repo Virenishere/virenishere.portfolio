@@ -1,8 +1,38 @@
 [
   {
+    "title": "JS Developer",
+    "company": "Binaire Pvt. Ltd.",
+    "tip": "Currently working here",
+    "startDate": "Apr 2026",
+    "endDate": "Present",
+    "location": "Onsite, New Delhi, India",
+    "description": [
+      "Contributing to the production development of the next-generation IRIX Photo Editor, building features across Electron, JavaScript and performance-critical image processing workflows.",
+      "Built a Digital Asset Management (DAM) workflow for importing and processing LibRaw files, integrating image processing capabilities into the desktop application.",
+      "Optimized CPU-intensive image processing using worker threads and asynchronous processing to maintain application responsiveness during heavy workloads.",
+      "Developed a real-time server notification system that fetches updates, synchronizes application state and handles dynamic asset downloads with local caching.",
+      "Worked on filesystem-heavy workflows involving image assets, caching, asynchronous operations and communication between the Electron application and backend services."
+    ],
+    "lang": [
+      "JavaScript",
+      "Electron",
+      "HTML",
+      "CSS",
+      "Tailwind",
+      "Vite",
+      "React",
+      "LibRaw",
+      "Worker Threads",
+      "PostgreSQL",
+      "MongoDB",
+      "Express",
+      "Git"
+    ]
+  },
+  {
     "title": "Full-Stack Engineer",
     "company": "Peeker AI",
-    "tip": "Currently working here",
+    "tip": "AI-Assisted Dashboard",
     "startDate": "Nov 2025",
     "endDate": "Present",
     "location": "Remote, New York, USA",
@@ -76,7 +106,7 @@
   {
     "title": "Full-Stack Developer Intern",
     "company": "Image Pipeline",
-    "tip": "Text-to-Image generation backend",
+    "tip": "Canvas App for AI-Models",
     "startDate": "Jan 2025",
     "endDate": "Apr 2025",
     "location": "Remote, Delaware, USA",
